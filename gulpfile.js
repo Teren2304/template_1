@@ -16,9 +16,9 @@ var paths = {
         build: './build'
     },
     html: {
-        src: './dev/pages/*.pug',
+        src: './dev/pages/**/*.pug',
         dest: './build',
-        watch: ['./dev/pages/*.pug', './dev/templates/*.pug', './dev/modules/**/*.pug']
+        watch: ['./dev/pages/**/*.pug', './dev/template/**/*.pug', './dev/modules/**/*.pug']
     },
     css: {
         src: ['./dev/style/style.scss'],

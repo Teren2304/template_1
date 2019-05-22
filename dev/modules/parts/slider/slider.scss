@@ -1,0 +1,44 @@
+.slider{
+	padding: 20px;
+	&__item{
+		&:hover{
+			i{
+				opacity: 1;
+			}
+		}
+		i{
+			color: #fff;
+			font-size: 74px;
+			opacity: 0.3;
+			margin: 0 auto 10px auto;
+			transition: all .3s;
+		}
+	}
+}
+
+.slick-dots{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30px;
+	li{
+		margin: 0 5px;
+		&.slick-active{
+			button{
+				height: 18px;
+				width: 18px;
+				background-color: #fff;
+			}
+		}
+		button{
+			height: 15px;
+			width: 15px;
+			font-size: 0;
+			color: rgba(0,0,0,0);
+			border: 0;
+			overflow: hidden;
+			border-radius: 100%;
+			background-color: darken(#fff, 30%);
+		}
+	}
+}

@@ -1,0 +1,21 @@
+mixin education-right(value)
+	.education.education--right.flex.align-center-middle&attributes(attributes)
+		each item in value
+			.education__time
+				.text-left
+					h2.h2.h2--white= item.year
+			.education__description
+				p.font.font--white.font--lg= item.diploma
+				p.font.font--white.font--md= item.city
+				p.font= item.text
+
+mixin education-left(value)
+	.education.education--left.flex.align-center-middle&attributes(attributes)
+		each item in value
+			.education__description
+				p.font.font--white.font--lg= item.diploma
+				p.font.font--white.font--md= item.city
+				p.font= item.text
+			.education__time
+				.text-right
+					h2.h2.h2--white= item.year

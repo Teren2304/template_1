@@ -1,0 +1,33 @@
+.close{;
+	height: 50px;
+	width: 50px;
+	display: none;
+	position: fixed;
+	right: 30px;
+	top: 10px;
+	z-index: 3;
+	&:before,
+	&:after{
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		height: 2px;
+		width: inherit;
+		transition: all .5s;
+		background-color: #fff;
+	}
+	&:before{
+		transform: translate(-50%, -50%) rotateZ(45deg);
+	}
+	&:after{
+		transform: translate(-50%, -50%) rotateZ(-45deg);
+	}
+	&:hover,
+	&--active{
+		&:before,
+		&:after{
+			background-color: $primary;
+		}
+	}
+}

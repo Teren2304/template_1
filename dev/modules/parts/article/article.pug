@@ -1,0 +1,9 @@
+mixin article(value)
+	a.article&attributes(attributes)
+		each item in value
+			.article__header
+				.img.img--hover
+					img(src="./img/article/img/"+item.img)
+			.flex.flex-column.align-right.article__body
+				h5.h5.h5--third= item.title
+				h6.h6.h5--third= item.text

@@ -1,0 +1,19 @@
+.textarea{
+	resize: none;
+	width: 100%;
+	height: 200px;
+	padding: 15px 10px;
+	border: 0;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 300;
+	transition: all .3s;
+	background-color: lighten(#000, 10%);
+	@include placeholder(#666);
+	&:hover{
+		background-color: lighten(#000, 15%);
+	}
+	&:focus{
+		outline: 1px solid $primary;
+	}
+}

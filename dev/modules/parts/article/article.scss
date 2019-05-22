@@ -1,0 +1,41 @@
+.article{
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 30px;
+	@include media-max($screen-sm){
+		margin-bottom: 15px;
+	}
+	&:hover{
+		.article__body{
+			transform: translateY(0);
+		}
+		.article__header img{
+			transform: scale(1.2);
+		}
+	}
+	&__header{
+		overflow: hidden;
+		img{
+			display: block;
+			width: 100%;
+			height: auto;
+			transition: all .3s;
+		}
+	}
+	&__body{
+		padding: 20px;
+		position: absolute;
+		background-color: rgba(255,255,255,0.7);
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		transition: all .3s;
+		transform: translateY(100%);
+		*{
+			margin-bottom: 5px;
+		}
+	}
+}

@@ -1,0 +1,6 @@
+mixin service(value)
+	a.service.text-center&attributes(attributes)
+		each item in value	
+			img(src="./img/what-do/icons/" + item.img)
+			p.font.font--white= item.title
+			p.font= item.text

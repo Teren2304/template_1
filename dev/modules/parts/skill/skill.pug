@@ -1,0 +1,5 @@
+mixin skill(value)
+	.skill&attributes(attributes)
+		each item in value
+			.skill__wrapper(style="height:"+item.percent)
+			h5.h5.h5--white.skill__text(style="background-image: url(./img/skills/"+item.img+")")= item.percent

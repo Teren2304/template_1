@@ -1,0 +1,6 @@
+mixin menu()
+	- var menu = [{name: "About", link:"#about"},{name: "Contact", link:"#contact"},{name: "Portfolio", link:"#portfolio"},{name: "Strength", link:"#strength"}];
+	ul.menu&attributes(attributes)
+		each item in menu
+			li.menu__item
+				a.font.font--white.text-uppercase.link(href=item.link)= item.name

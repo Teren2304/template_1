@@ -1,0 +1,19 @@
+.service{
+	margin: 20px 0;
+	display: block;
+	&:hover{
+		img{
+			transform: scale(1.2);
+		}
+		p{
+			transform: translateY(10px);
+		}
+	}
+	img{
+		transition: all .3s;
+		margin: 0 auto 10px auto;
+	}
+	p{
+		transition: all .3s;
+	}
+}

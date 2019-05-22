@@ -1,0 +1,11 @@
+mixin experience(value)
+	.experience.flex.align-center-middle&attributes(attributes)
+		each item in value
+			.experience__time
+				.text-right
+					h2.h2.h2--white= item.year
+					p.font.font--white= item.date
+			.experience__description
+				p.font.font--white.font--lg= item.position
+				p.font.font--white.font--md= item.company
+				p.font= item.text

@@ -1,0 +1,70 @@
+.experience{
+	position: relative;
+	margin: 20px 0;
+	@include media-max($screen-sm){
+		flex-wrap: wrap;
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: 65%;
+		z-index: 0;
+		background-color: lighten(#000, 10%);
+		transition: all .3s;
+		@include media-max($screen-sm){
+			width: 100%;
+		}
+	}
+	&:hover{
+		&:after{
+			background-color: lighten(#000, 20%);
+		}
+		.experience__time h2{
+			color: $primary;
+		}
+	}
+	&__time,
+	&__description{
+		position: relative;
+		z-index: 1;
+		@include media-max($screen-sm){
+			padding: 5px 15px!important;
+			*{
+				text-align: left;
+			}
+		}
+	}
+
+	&__time{
+		width: 40%;
+		flex: 1 1 40%;
+		@include media-max($screen-sm){
+			width: 100%;
+			flex: 1 1 100%;
+		}
+		h2{
+			font-size: 80px;
+			font-weight: 600;
+			color: darken(#fff, 60%);
+			transition: all .3s;
+			@include media-max($screen-sm){
+				font-size: 60px;
+			}
+		}
+	}
+	&__description{
+		width: 60%;
+		flex: 1 1 60%;
+		padding: 20px;
+		@include media-max($screen-sm){
+			width: 100%;
+			flex: 1 1 100%;
+		}
+		*{
+			margin-bottom: 10px;
+		}
+	}
+}

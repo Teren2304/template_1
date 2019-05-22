@@ -1,0 +1,244 @@
+extends ../template/template.pug
+block content
+	.page
+		+nav
+			+menu
+		main.main
+			+close
+			h1.main__title 
+				span Hello!
+				br
+				span I'm Igor
+
+			section.section#about
+				.container-fluid
+					.container
+						//- About
+						.row.row--about.align-center
+							.col-12.col-md-6
+								img(src="./img/about/bg.jpg", alt="").img
+							.col-12.col-md-6
+								.caption
+									h3.h3.h3--white.text-uppercase ABOUT ME
+									.flex.align-middle
+										.caption__line
+										.caption__text
+											h5.h5.h5--primary.text-uppercase WHO AM I
+								p.font.text There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures.
+								.flex.align-middle.flex-wrap
+									+button('button').button--small Download Resume
+									+button('button').button--small Hire Me
+
+						//- Education
+						.row.row--education.align-center
+							.col-12
+								.flex.align-center
+									.caption
+										h3.h3.h3--white.text-uppercase EDUCATION
+										.flex.align-middle
+											.caption__line
+											.caption__text
+												h5.h5.h5--primary.text-uppercase LEARNING
+							.education-list
+								.row.align-right
+									.col-12.col-lg-6
+										-var education = [{diploma: "Diploma In Web Design",city: "New York",text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",year: "2010"}]
+										+education-right(education)
+								.row.align-left
+									.col-12.col-lg-6
+										-var education = [{diploma: "Diploma In Web Design",city: "New York",text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",year: "2010"}]
+										+education-left(education)
+								.row.align-right
+									.col-12.col-lg-6
+										-var education = [{diploma: "Diploma In Web Design",city: "New York",text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",year: "2010"}]
+										+education-right(education)
+								.row.align-left
+									.col-12.col-lg-6
+										-var education = [{diploma: "Diploma In Web Design",city: "New York",text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",year: "2010"}]
+										+education-left(education)
+
+						//- Experience
+						.row.row--experience.align-center
+							.col-12
+								.flex.align-center
+									.caption
+										h3.h3.h3--white.text-uppercase EXPERIENCE
+										.flex.align-middle
+											.caption__line
+											.caption__text
+												h5.h5.h5--primary.text-uppercase INVOLVEMENT
+							.experience-list
+								.row
+									.col-12.col-lg-6
+										- var experience = [{year: "2012",date: "July To 2013 Sep",position: "Junior Ui/Ux Designer",company: "Amazon",text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."}]
+										+experience(experience)
+									.col-12.col-lg-6
+										- var experience = [{year: "2013",date: "July To 2013 Sep",position: "Junior Ui/Ux Designer",company: "Amazon",text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."}]
+										+experience(experience)
+									.col-12.col-lg-6
+										- var experience = [{year: "2016",date: "Jun To 2015 Mar",position: "Senior Ui/Ux Designer",company: "Google",text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."}]
+										+experience(experience)
+									.col-12.col-lg-6
+										- var experience = [{year: "2018",date: "Apr To Present",position: "Junior Ui/Ux Designer",company: "Amazon",text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."}]
+										+experience(experience)
+
+						//- Profile
+						.row.row--profile.align-middle
+							.col-12.col-md-6
+								+slider
+							.col-12.col-md-6
+								.caption
+									h3.h3.h3--white.text-uppercase PROFILES
+									.flex.align-middle
+										.caption__line
+										.caption__text
+											h5.h5.h5--primary.text-uppercase WORKS AT
+								p.font There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures.
+
+			section.section#contact
+				.container-fluid
+					.container
+						.flex.align-center
+							.caption
+								h3.h3.h3--white.text-uppercase GET IN TOUCH
+								.flex.align-middle
+									.caption__line
+									.caption__text
+										h5.h5.h5--primary.text-uppercase CONTACT US
+						//- Contact
+						.row.row--contact
+							.col-12.col-sm-12.col-md-6
+								form
+									.row
+										.col-12
+											h5.h5.h5--white.text-uppercase.text-nowrap HOW WE CAN HELP YOU ?
+										.col-12.col-sm-12.col-lg-6
+											+field('text', 'Your Name', 'form_name', true)
+										.col-12.col-sm-12.col-lg-6
+											+field('email', 'Your Email', 'form_name', true)
+										.col-12
+											+field('email', 'Subject', 'form_subject', false)
+										.col-12
+											+textarea('Message', 'form_text', true)
+										.col-12
+											+button('submit').button--small Submit
+							.col-12.col-sm-12.col-md-6
+								.map
+
+			section.section#portfolio
+				.container-fluid
+					.container
+						.flex.align-center
+							.caption
+								h3.h3.h3--white.text-uppercase PORTFOLIO
+								.flex.align-middle
+									.caption__line
+									.caption__text
+										h5.h5.h5--primary.text-uppercase MY WORK
+						//- Portfolio
+						.row.row--portfolio.align-center
+							.col-12.col-sm-7.col-xl-4
+								-var article = [{img: '1.jpg', title: "Box Mockup Design", text: "Mockup"}]
+								+article(article)(href="#")
+								-var article = [{img: '4.jpg', title: "Box Mockup Design", text: "Mockup"}]
+								+article(article)(href="#")
+							.col-12.col-sm-7.col-xl-4
+								-var article = [{img: '2.jpg', title: "Box Mockup Design", text: "Mockup"}]
+								+article(article)(href="#")
+								-var article = [{img: '5.jpg', title: "Box Mockup Design", text: "Mockup"}]
+								+article(article)(href="#")
+							.col-12.col-sm-7.col-xl-4
+								-var article = [{img: '3.jpg', title: "Box Mockup Design", text: "Mockup"}]
+								+article(article)(href="#")
+								-var article = [{img: '6.jpg', title: "Box Mockup Design", text: "Mockup"}]
+								+article(article)(href="#")
+							.col-12
+								.flex.align-center
+									+button('button').button--big Load More
+
+			section.section#strength
+				.container-fluid
+					.container
+						// What-do
+						.row.row--what-do.align-center-middle
+							.col-12
+								.flex.align-center
+									.caption
+										h3.h3.h3--white.text-uppercase WHAT I DO
+										.flex.align-middle
+											.caption__line
+											.caption__text
+												h5.h5.h5--primary.text-uppercase TAKE A LOOK
+							.col-12.col-lg-6
+								.img
+									img(src="./img/what-do/1.jpg")
+									img(src="./img/what-do/2.jpg")
+									img(src="./img/what-do/3.jpg")
+									img(src="./img/what-do/4.jpg")
+							.col-12.col-lg-6
+								.row
+									.col-12.col-sm-12.col-md-6
+										- var service = [{img: '1.png', title: " Website Design", text: " Lorem ipsum dolor sit amet, consectetur adipisicing"}]
+										+service(service)
+									.col-12.col-sm-12.col-md-6
+										- var service = [{img: '1.png', title: " Website Design", text: " Lorem ipsum dolor sit amet, consectetur adipisicing"}]
+										+service(service)
+									.col-12.col-sm-12.col-md-6
+										- var service = [{img: '1.png', title: " Website Design", text: " Lorem ipsum dolor sit amet, consectetur adipisicing"}]
+										+service(service)
+									.col-12.col-sm-12.col-md-6
+										- var service = [{img: '1.png', title: " Website Design", text: " Lorem ipsum dolor sit amet, consectetur adipisicing"}]
+										+service(service)
+
+						.row.row--skills.align-center
+							.col-12
+								.flex.align-center
+									.caption
+										h3.h3.h3--white.text-uppercase MY SKILLS
+										.flex.align-middle
+											.caption__line
+											.caption__text
+												h5.h5.h5--primary.text-uppercase EXPERT IN
+							.col-12.col-sm-6.col-md-3
+								- var skill = [{percent:"90%", img:"1.png"}]
+								+skill(skill).skill--blue
+								.text-center
+									p.font.font--white Photoshop
+							.col-12.col-sm-6.col-md-3
+								- var skill = [{percent:"87%", img:"2.png"}]
+								+skill(skill).skill--orange
+								.text-center
+									p.font.font--white Illustrator
+							.col-12.col-sm-6.col-md-3
+								- var skill = [{percent:"92%", img:"3.png"}]
+								+skill(skill).skill--orange
+								.text-center
+									p.font.font--white Html & Css
+							.col-12.col-sm-6.col-md-3
+								- var skill = [{percent:"76%", img:"4.png"}]
+								+skill(skill).skill--blue
+								.text-center
+									p.font.font--white WordPress
+						.row.row--clients.align-center-middle
+							.col-12
+								.flex.align-center
+									.caption
+										h3.h3.h3--white.text-uppercase CLIENTS
+										.flex.align-middle
+											.caption__line
+											.caption__text
+												h5.h5.h5--primary.text-uppercase WORKED...
+							.col-12.col-sm-6.col-md-3
+								a(href="#").client
+									img(src="./img/client/1.png")
+							.col-12.col-sm-6.col-md-3
+								a(href="#").client
+									img(src="./img/client/2.png")
+							.col-12.col-sm-6.col-md-3
+								a(href="#").client
+									img(src="./img/client/3.png")
+							.col-12.col-sm-6.col-md-3
+								a(href="#").client
+									img(src="./img/client/4.png")
+
+			+footer

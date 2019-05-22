@@ -1,0 +1,113 @@
+.education-list{
+	position: relative;
+	&:before{
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 0;
+		bottom: 0;
+		width: 2px;
+		background-color: #fff;
+		background-color: lighten(#000, 20%);
+		@include media-max($screen-lg){
+			left: -$grid-padding;
+		}
+		@include media-max($screen-sm){
+			left: $grid-padding;
+		}
+	}
+}
+.education{
+	position: relative;
+	@include media-max($screen-sm){
+		flex-wrap: wrap;
+	}
+	&:before{
+		content: '';
+		position: absolute;
+		height: 15px;
+		width: 15px;
+		border-radius: 100%;
+		border: 2px solid #fff;
+		transition: all .3s;
+	}
+	&--left{
+		&:before{
+			right: -$grid-padding;
+			transform: translateX(50%);
+			@include media-max($screen-lg){
+				left: -$grid-padding;
+				transform: translateX(-50%);
+			}
+			@include media-max($screen-sm){
+				left: 0;
+				transform: translateX(50%);
+			}
+		}
+	}
+	&--right{
+		&:before{
+			left: -$grid-padding;
+			transform: translateX(-50%);
+			@include media-max($screen-sm){
+				left: 0;
+				transform: translateX(50%);
+			}
+		}
+	}
+	&:hover{
+		&:before{
+			border-color: $primary;
+			background-color: #fff;
+		}
+		.education__time h2{
+			color: $primary;
+		}
+	}
+	&__time,
+	&__description{
+		position: relative;
+		z-index: 1;
+		@include media-max($screen-lg){
+			order: 1;
+		}
+	}
+
+	&__time{
+		width: 40%;
+		flex: 1 1 40%;
+		h2{
+			font-size: 80px;
+			font-weight: 600;
+			color: darken(#fff, 60%);
+			transition: all .3s;
+			@include media-max($screen-lg){
+				text-align: left;
+			}
+		}
+		@include media-max($screen-lg){
+			order: 1;
+		}
+		@include media-max($screen-sm){
+			width: 100%;
+			flex: 1 1 100%;
+			padding: 0 20px 0 30px;
+		}
+	}
+	&__description{
+		width: 60%;
+		flex: 1 1 60%;
+		padding: 20px;
+		@include media-max($screen-lg){
+			order: 2;
+		}
+		@include media-max($screen-sm){
+			width: 100%;
+			flex: 1 1 100%;
+			padding: 0 20px 0 30px;
+		}
+		*{
+			margin-bottom: 10px;
+		}
+	}
+}

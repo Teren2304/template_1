@@ -1,0 +1,21 @@
+.social{
+	@include media-max($screen-sm){
+		justify-content: center;
+	}
+	&__item{
+		height: 30px;
+		width: 30px;
+		margin: 0 5px;
+		position: relative;
+		background-color: lighten(#000, 20%);
+		&:hover,
+		&--active{
+			background-color: $primary;
+			color: #fff;
+		}
+		i{
+			content: '';
+			@include absolute-center;
+		}
+	}
+}

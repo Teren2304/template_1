@@ -123,7 +123,7 @@ block content
 										.col-12
 											+button('submit').button--small Submit
 							.col-12.col-sm-12.col-md-6
-								.map
+								.map#map
 
 			section.section#portfolio
 				.container-fluid
@@ -242,3 +242,4 @@ block content
 									img(src="./img/client/4.png")
 
 			+footer
+			script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAliosaXSno8yasHmzzOGS_iyU0ffdboVg&callback=initMap" async defer)

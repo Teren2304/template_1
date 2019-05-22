@@ -106,11 +106,22 @@
 			}
 		}
 		.map{
-			border: 1px solid red;
 			width: 100%;
 			height: 100%;
+			position: relative;
+			&:before{
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				height: 30px;
+				z-index: 1;
+				background-color: #000;
+			}
 			@include media-max($screen-md){
 				height: 500px;
+				margin-top: 30px;
 			}
 		}
 	}

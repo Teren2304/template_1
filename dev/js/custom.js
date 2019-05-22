@@ -189,3 +189,6 @@ function initMap() {
 	    });
 }
 // END OF gooogle map api
+$(document).ready(function(){
+	$('.preloader').hide();
+});

@@ -7,11 +7,17 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
+	@include media-max($screen-sm){
+		padding: 10px 0;
+	}
 	.row{
 		& > *{
 			margin: 10px 0;
 			@include media-max($screen-sm){
 				text-align: center;
+				.font{
+					font-size: 12px;
+				}
 			}
 		}
 	}

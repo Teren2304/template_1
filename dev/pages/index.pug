@@ -29,7 +29,8 @@ block content
 								.flex.align-middle.flex-wrap
 									+button('button').button--small Download Resume
 									+button('button').button--small Hire Me
-
+				.container-fluid
+					.container
 						//- Education
 						.row.row--education.align-center
 							.col-12
@@ -57,7 +58,8 @@ block content
 									.col-12.col-lg-6
 										-var education = [{diploma: "Diploma In Web Design",city: "New York",text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",year: "2010"}]
 										+education-left(education)
-
+				.container-fluid
+					.container
 						//- Experience
 						.row.row--experience.align-center
 							.col-12
@@ -82,7 +84,8 @@ block content
 									.col-12.col-lg-6
 										- var experience = [{year: "2018",date: "Apr To Present",position: "Junior Ui/Ux Designer",company: "Amazon",text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."}]
 										+experience(experience)
-
+				.container-fluid
+					.container
 						//- Profile
 						.row.row--profile.align-middle
 							.col-12.col-md-6
@@ -125,6 +128,24 @@ block content
 											+button('submit').button--small Submit
 							.col-12.col-sm-12.col-md-6
 								.map#map
+							.col-12.col-sm-12.col-md-4
+								.contact.flex.flex-column.align-center-middle.background.shadow(style="background-image: url('../img/contact/1.jpg')")
+									.text-center
+										h6.h6.h6--white Phone
+										a(href="tel:30000000000").font +3(000)000-00-00
+										a(href="tel:30000000000").font +3(000)000-00-00
+							.col-12.col-sm-12.col-md-4
+								.contact.flex.flex-column.align-center-middle.background.shadow(style="background-image: url('../img/contact/2.jpg')")
+									.text-center
+										h6.h6.h6--white Email
+										a(href="mailto:test@test.com").font test@test.com
+										a(href="mailto:test@test.com").font test@test.com
+							.col-12.col-sm-12.col-md-4
+								.contact.flex.flex-column.align-center-middle.background.shadow(style="background-image: url('../img/contact/3.jpg')")
+									.text-center
+										h6.h6.h6--white Address
+										p.font Zabolotnoho Str. 102
+											|	Kiev, 03146
 
 			section.section#portfolio
 				.container-fluid
@@ -190,7 +211,31 @@ block content
 									.col-12.col-sm-12.col-md-6
 										- var service = [{img: '1.png', title: " Website Design", text: " Lorem ipsum dolor sit amet, consectetur adipisicing"}]
 										+service(service)
-
+				.container-fluid.background.shadow(style="background-image: url('./img/counter/bg.jpg');margin-left: -25px; margin-right: -25px;")
+					.container
+						// What-do
+						.row.row--counter
+							.col-12.col-sm-12.col-md-4
+								.counter.margin
+									img(src="./img/counter/1.png")
+									.text-left
+										h6.h6.h6--white 95
+										p.font Happy Clients
+							.col-12.col-sm-12.col-md-4
+								.counter
+									img(src="./img/counter/2.png")
+									.text-left
+										h6.h6.h6--white 165
+										p.font Project Done
+							.col-12.col-sm-12.col-md-4
+								.counter
+									img(src="./img/counter/3.png")
+									.text-left
+										h6.h6.h6--white 16
+										p.font Award Won
+				.container-fluid
+					.container
+						// Skills
 						.row.row--skills.align-center
 							.col-12
 								.flex.align-center
@@ -220,6 +265,9 @@ block content
 								+skill(skill).skill--blue
 								.text-center
 									p.font.font--white WordPress
+				.container-fluid
+					.container
+						// Clients
 						.row.row--clients.align-center-middle
 							.col-12
 								.flex.align-center

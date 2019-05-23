@@ -124,6 +124,21 @@
 				margin-top: 30px;
 			}
 		}
+		.contact{
+			margin-top: 30px;
+			min-height: 200px;
+			padding: 20px;
+			transition: all .3s;
+			&:hover{
+				transform: scale(1.05)
+			}
+			a{
+				display: block;
+				&:hover{
+					color: $primary;
+				}
+			}
+		}
 	}
 	
 	&--what-do{
@@ -169,6 +184,32 @@
 			}
 		}
 	}
+	&--counter{
+		padding: 50px;
+		.counter{
+			position: relative;
+			@include media-max($screen-md){
+				margin-top: 40px;
+			}
+			img{
+				margin: 0 auto;
+				max-width: 100px;
+				max-height: 100px;
+			}
+			.text-left{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(25%, -50%);
+				@include media-max($screen-md){
+					margin-top: 10px;
+					position: static;
+					text-align: center;
+					transform: translate(0, 0);
+				}
+			}
+		}
+	}
 	&--skills{
 	}
 	&--clients{
@@ -194,7 +235,8 @@
 	&--experience,
 	&--profile,
 	&--portfolio,
-	&--contact{
+	&--contact,
+	&--counter{
 		margin-bottom: 100px;
 		@include media-max(768){
 			margin-bottom: 150px;
